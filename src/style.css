@@ -1,0 +1,45 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  text-decoration: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #E5E2E3;
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+div {
+  font-size: 1rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
+}
+li {
+  list-style: none;
+}
+
+button {
+  all: unset;
+  color: white;
+}
+
+img {
+  text-decoration: none;
+}
+
+.bodyBackground {
+  background-color: #ffffff;
+}

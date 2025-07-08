@@ -1,0 +1,65 @@
+.cv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: #1B1B2F;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: #252539;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #4FC3F7;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.skills-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #cfcfcf;
+}
+
+.skills-section li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 2rem 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  .skills-section li {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}

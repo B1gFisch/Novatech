@@ -1,0 +1,94 @@
+/* Part of this css was adapted from a Stack Overflow snippet */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel__slide img {
+
+  height: 300px;
+  aspect-ratio: 9/16;
+  border-radius: 8%;
+  box-shadow: 10px 10px 115px -31px rgba(0, 0, 0, 0.76);
+  -webkit-box-shadow: 10px 10px 115px -31px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: 10px 10px 115px -31px rgba(0, 0, 0, 0.76);
+}
+/* Shadow was generated with Shadow generator */
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel__button.prev {
+  left: 10px;
+}
+
+.carousel__button.next {
+  right: 10px;
+}
+
+.carousel__button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel__dot.active {
+  background-color: #333;
+}
+
+.carousel__image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.carousel__image-container.next {
+  opacity: 0.5;
+  transform: translateX(25%) scale(0.8);
+}
+
+.carousel__image-container.previous {
+  opacity: 0.5;
+  transform: translateX(-25%) scale(0.8);
+}
