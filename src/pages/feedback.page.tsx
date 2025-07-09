@@ -8,7 +8,7 @@ function FeedbackPage() {
 
     const loadComments = async () => {
         try {
-            const res = await axios.get("/api/comments");
+            const res = await axios.get("/comments");
             setComments(res.data);
         } catch (e) {
             console.error("Fehler beim Laden der Kommentare:", e);
@@ -18,7 +18,7 @@ function FeedbackPage() {
     const submitComment = async () => {
         if (!newComment.trim()) return;
         try {
-            await axios.post("/api/comments", {
+            await axios.post("/comments", {
                 content: newComment
             });
             setNewComment("");
@@ -29,12 +29,12 @@ function FeedbackPage() {
     };
 
     const likeComment = async (id: number) => {
-        await axios.post(`/api/comments/${id}/like`);
+        await axios.post(`/comments/${id}/like`);
         loadComments();
     };
 
     const dislikeComment = async (id: number) => {
-        await axios.post(`/api/comments/${id}/dislike`);
+        await axios.post(`/comments/${id}/dislike`);
         loadComments();
     };
 
