@@ -30,8 +30,10 @@ function FeedbackPage() {
 
     const likeComment = async (id: number) => {
         const likedKey = `liked_${id}`;
-        if (localStorage.getItem(likedKey)) {
-            alert("Du hast diesen Kommentar bereits positiv bewertet.");
+        const dislikedKey = `disliked_${id}`;
+
+        if (localStorage.getItem(likedKey) || localStorage.getItem(dislikedKey)) {
+            alert("Du hast diesen Kommentar bereits bewertet.");
             return;
         }
 
@@ -45,9 +47,11 @@ function FeedbackPage() {
     };
 
     const dislikeComment = async (id: number) => {
+        const likedKey = `liked_${id}`;
         const dislikedKey = `disliked_${id}`;
-        if (localStorage.getItem(dislikedKey)) {
-            alert("Du hast diesen Kommentar bereits negativ bewertet.");
+
+        if (localStorage.getItem(likedKey) || localStorage.getItem(dislikedKey)) {
+            alert("Du hast diesen Kommentar bereits bewertet.");
             return;
         }
 
@@ -81,6 +85,7 @@ function FeedbackPage() {
                 {comments.map((c: any) => {
                     const liked = localStorage.getItem(`liked_${c.id}`);
                     const disliked = localStorage.getItem(`disliked_${c.id}`);
+                    const alreadyVoted = liked || disliked;
 
                     return (
                         <div key={c.id} className="comment">
@@ -92,13 +97,15 @@ function FeedbackPage() {
                             <div className="actions">
                                 <button
                                     onClick={() => likeComment(c.id)}
-                                    disabled={!!liked}
+                                    disabled={!!alreadyVoted}
+                                    className={liked ? "voted-like" : ""}
                                 >
                                     👍 {c.likes}
                                 </button>
                                 <button
                                     onClick={() => dislikeComment(c.id)}
-                                    disabled={!!disliked}
+                                    disabled={!!alreadyVoted}
+                                    className={disliked ? "voted-dislike" : ""}
                                 >
                                     👎 {c.dislikes}
                                 </button>

@@ -139,3 +139,14 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.voted-like {
+  background-color: #81d4fa !important;
+  color: #000000;
+  font-weight: bold;
+}
+
+.voted-dislike {
+  background-color: #ff8a80 !important;
+  color: #000000;
+  font-weight: bold;
+}
