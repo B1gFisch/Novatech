@@ -18,13 +18,11 @@ function AboutPage() {
           </p>
         </section>
         <section className="skills-section">
-          <h3>Unsere Kernkompetenzen</h3>
-          <ul>
-            <li>Cloud-Migration & -Architektur</li>
-            <li>Enterprise Softwareentwicklung</li>
-            <li>Cybersecurity & Datenschutz</li>
-            <li>DevOps & CI/CD</li>
-          </ul>
+            <h3>Unsere Kernkompetenzen</h3>
+            <p>Cloud-Migration & -Architektur</p>
+            <p>Enterprise Softwareentwicklung</p>
+            <p>Cybersecurity & Datenschutz</p>
+            <p>DevOps & CI/CD</p>
         </section>
       </div>
   );

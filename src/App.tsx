@@ -13,19 +13,20 @@ import LoginPage from "./pages/login.page";
 
 function App() {
     return (
-
-        <div className="bodyBackground">
-            <NavComponent/>
-            <Routes>
-                <Route path="/" element={<HomePage/>}/>
-                <Route path="/about" element={<AboutPage/>}/>
-                <Route path="/feedback" element={<FeedbackPage/>}/>
-                <Route path="/solutions" element={<SolutionsPage/>}/>
-                <Route path="/services" element={<ServicesPage/>}/>
-                <Route path="/admin" element={<AdminPage/>}/>
-                <Route path="/login" element={<LoginPage/>}/>
-            </Routes>
-            <Footer/>
+        <div className="page-wrapper">
+            <NavComponent />
+            <main className="main-content">
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/feedback" element={<FeedbackPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/admin" element={<AdminPage />} />
+                    <Route path="/login" element={<LoginPage />} />
+                </Routes>
+            </main>
+            <Footer />
         </div>
     );
 }
