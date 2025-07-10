@@ -133,3 +133,9 @@
     gap: 0.3rem;
   }
 }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
